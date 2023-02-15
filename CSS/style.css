@@ -1,0 +1,1019 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "cairo", sans-serif;
+
+}
+
+.container {
+    width: 900px;
+    min-width: 900px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* -------------------------------------------------- Home ----------------------------------------- */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #eaddd8;
+
+}
+
+header .logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fb4d5c;
+    padding: 20px 0;
+}
+
+header .menu {
+    flex: 1;
+    height: 100%;
+
+}
+
+header .menu ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+
+}
+
+
+header .menu ul a {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: #1c2b33;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 23px 15px;
+    transition: .3s;
+}
+
+/* for link background animation */
+header .menu ul a::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    bottom: 0px;
+    left: 0;
+    z-index: -1;
+
+    border-bottom: 3px solid #fb4d5c;
+    transition: .3s;
+
+}
+
+/* for link border animation */
+header .menu ul a::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    bottom: 0px;
+    right: 0;
+    z-index: -2;
+    background-color: #e1e1e1;
+    transition: .3s;
+
+}
+
+header .menu ul a:hover {
+    color: #fb4d5c;
+}
+
+header .menu ul a:hover::before,
+header .menu ul a:hover::after {
+    width: 100%;
+}
+
+
+.land {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 65px;
+    border-bottom: 2px solid #eaddd8;
+}
+
+.land .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    margin-bottom: 50px;
+    padding-top: 80px;
+
+}
+
+
+
+.land .container img {
+    animation: img 3s linear infinite alternate;
+}
+
+@keyframes img {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+}
+
+.land .container .text {
+    display: flex;
+    flex-direction: column;
+    height: 512px;
+    flex: 1;
+    padding: 50px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+    line-height: 1;
+
+}
+
+
+
+
+.land .container .text h1 {
+    margin-top: -5px;
+    font-size: 50px;
+    color: #1c2b33;
+}
+
+.land .container .text .H1 {
+    margin: -25px 0 -10px;
+    font-size: 50px;
+    letter-spacing: 6px;
+
+}
+
+.land .container .text h3 {
+    color: #fb4d5c;
+    position: relative;
+    letter-spacing: 4px;
+    overflow: hidden;
+    font-size: 18px;
+
+}
+
+/* for underline animation in home */
+.land .container .text .animateLine {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    margin: 0px 0;
+    width: 100%;
+    overflow: hidden;
+    height: 20px;
+}
+
+.land .container .text .animateLine div {
+    width: 10px;
+    height: 0px;
+    background-color: #3b5b6c;
+    border-radius: 10px;
+    animation: aniLine 1s linear infinite alternate;
+
+}
+
+@keyframes aniLine {
+    100% {
+        height: 20px;
+
+    }
+}
+
+.land .container .text .animateLine .d1 {
+    animation-delay: 1s;
+}
+
+.land .container .text .animateLine .d2 {
+    animation-delay: .5s;
+}
+
+.land .container .text .animateLine .d3 {
+    animation-delay: 0;
+}
+
+.land .container .text .animateLine .d4 {
+    animation-delay: .5s;
+}
+
+.land .container .text .animateLine .d5 {
+    animation-delay: 1s;
+}
+
+
+.land .container .text button {
+    margin-top: 50px;
+    width: 150px;
+    height: 50px;
+    background-color: #fb4d5c;
+    border: none;
+    font-size: 20px;
+    border-radius: 12px;
+    color: white;
+    border: 1px solid #fb4d5c;
+}
+
+.land .container .text button:hover {
+    background-color: transparent;
+    color: #fb4d5c;
+    border: 1px solid #fb4d5c;
+}
+
+.icons {
+    padding: 20px 5px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.icons a {
+    color: #3b5b6c;
+}
+
+.icons i:hover {
+    color: #fb4d5c;
+    transform: scale(1.2);
+
+}
+
+#home {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #385a64;
+    font-size: 500px;
+    z-index: -1;
+    opacity: .05;
+}
+
+/* -------------------------------------- Gallery ---------------------------------- */
+.gallery {
+    position: relative;
+    padding: 50px 0;
+    border-bottom: 2px solid #eaddd8;
+}
+
+.gallery .container img {
+    width: 470px;
+    height: 500px;
+}
+
+.gallery .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+.title {
+    position: relative;
+    text-align: right;
+    height: fit-content;
+    padding: 0px 40px 0 80px;
+    transition: 1s;
+    width: fit-content;
+    height: 155px;
+}
+
+/* for title animation */
+.title::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+}
+
+.title span {
+    font-size: 150px;
+    position: absolute;
+    font-weight: bold;
+    color: #fb4d5c;
+    top: -50px;
+    left: -15px;
+    transform: rotate(20deg);
+    transition: 1s;
+
+}
+
+.title p {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: #1c2b33;
+    transition: 1s;
+}
+
+.title:hover span {
+    font-size: 60px;
+    font-weight: 700;
+    top: 43px;
+    left: 40px;
+    transform: rotate(0deg);
+    color: #1c2b33;
+}
+
+.title:hover::after {
+    width: 100%;
+    height: 100%;
+    background-color: #fb4d5c;
+    border-radius: 20px;
+}
+
+.title:hover p {
+    color: white;
+    letter-spacing: 0px;
+}
+
+
+
+
+#gal {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #385a64;
+    font-size: 500px;
+    z-index: -2;
+    opacity: .05;
+}
+
+#down {
+    position: absolute;
+    font-size: 30px;
+    bottom: 50px;
+    right: 42%;
+    color: #385a64;
+    opacity: 0;
+    animation: godown .3s linear infinite alternate;
+}
+
+@keyframes godown {
+
+    0% {
+        bottom: 50px;
+    }
+
+    100% {
+        bottom: 40px;
+        opacity: 1;
+    }
+
+}
+
+/* ------------------------------------ Gallery Slider ----------------------------------- */
+.gallerySlider {
+    background-color: #ececec;
+    padding: 50px 0;
+}
+
+.gallerySlider .container {
+    position: relative;
+    width: 900px;
+    height: 599px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(10px);
+}
+
+.gallerySlider .container .slider img {
+    width: 0%;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+/* .active class to select one image to view in slider */
+.gallerySlider .container .slider .active {
+    width: 900px;
+    height: 599px;
+    opacity: 1;
+
+}
+
+.gallerySlider .container .arrow {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 35px;
+    color: #1c2b33;
+    animation: arro .5s linear infinite alternate;
+
+}
+
+@keyframes arro {
+    100% {
+        padding: 30px;
+    }
+
+}
+
+.gallerySlider .container .arrow i {
+    background: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.gallerySlider .container .arrow i:hover {
+    color: #fb4d5c;
+}
+
+/* .disable class to hide right or left arrow when the current image is the last or the first image */
+.gallerySlider .container .arrow .disable {
+    color: #385a64;
+    cursor: no-drop;
+    opacity: .3;
+}
+
+
+.gallerySlider .container .bar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 10px;
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    bottom: 0px;
+    z-index: 2;
+}
+
+.gallerySlider .container .bar div {
+    width: 15px;
+    height: 15px;
+    background-color: #1c2b33;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.gallerySlider .container .bar div.active {
+    background-color: #fb4d5c;
+
+    z-index: 3;
+    animation: circle-act .5s linear infinite alternate;
+}
+
+@keyframes circle-act {
+    100% {
+        transform: scale(1.2);
+    }
+
+}
+
+/* -------------------------------------------------------- About Me ------------------------------------ */
+.about {
+    padding: 100px 0 100px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #eaddd8;
+}
+
+#icon {
+    flex-direction: column;
+    height: 250px;
+    margin-top: 290px;
+    padding: 5px 20px;
+}
+
+.about .container {
+    width: 1000px;
+}
+
+.about .title {
+    margin-left: 50px;
+
+}
+
+.about .title p {
+    padding-top: 50px;
+}
+
+.about .me {
+    position: relative;
+    padding: 50px;
+    min-width: 390px;
+    height: 500px;
+    padding-bottom: 0;
+    border-radius: 0 15%;
+    overflow: hidden;
+    background: linear-gradient(#fb4d5c, #fb4d5c, #385a64);
+    backdrop-filter: blur(20px);
+    padding-top: 80px;
+
+}
+
+/*for my picture animation  */
+.about .me::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 70%;
+    background: linear-gradient(#385a64, #1c2b33);
+    bottom: -60px;
+    left: -50px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+    transition: .3s;
+    opacity: .5;
+}
+
+.about .me:hover::after {
+    transform: rotate(30deg);
+    left: -150px;
+}
+
+.about .me img {
+    width: 290px;
+    height: 450px;
+    margin-bottom: -10px;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about .content h2 {
+    color: #1c2b33;
+    margin-top: 50px;
+}
+
+.about .content .p1 {
+    color: #385a64;
+    padding: 20px 50px;
+    margin-right: 50px;
+    border-radius: 0 0 0 50px;
+    background-color: #ececec;
+}
+
+.skills-projects {
+    width: 1000px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+
+
+
+}
+
+
+
+.about .projects {
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background: linear-gradient(#fb4d5c, #385a64);
+    border-radius: 0 15%;
+    padding-left: 30px;
+
+
+}
+
+.about .projects a {
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+}
+
+.about .skills {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.about .skills h2 {
+    text-align: center;
+}
+
+.about .bl {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.about .bl div {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #ececec;
+}
+
+.about .bl div::after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fb4d5c;
+
+
+}
+
+.about .html div::after {
+    animation: an1 1s linear forwards;
+    animation-delay: 2s;
+
+}
+
+@keyframes an1 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    }
+
+}
+
+.about .css div::after {
+    animation: an2 1s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes an2 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+
+}
+
+.about .js div::after {
+    animation: an3 1s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes an3 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+
+}
+
+.about .python div::after {
+    animation: an4 1s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes an4 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 75%;
+    }
+
+}
+
+#info {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    color: #385a64;
+    font-size: 500px;
+    z-index: -1;
+    opacity: .03;
+}
+
+/* ------------------------------------------------------------------- registraion -------------------------------------------------- */
+.registraion {
+    height: 100vh;
+    background-color: transparent;
+    background-attachment: cover;
+    background-size: cover;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+.registraion::before {
+    content: "";
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fb4d5c;
+    z-index: -1;
+    animation: leftball 3s linear infinite alternate;
+
+}
+
+.registraion::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #1c2b33;
+    z-index: -2;
+    animation: rightball 3s linear infinite alternate;
+
+
+}
+
+@keyframes leftball {
+    100% {
+        top: 100px;
+        left: 100px;
+
+    }
+
+}
+
+@keyframes rightball {
+    100% {
+        bottom: 100px;
+        right: 100px;
+
+    }
+
+}
+
+.registraion .container {
+    background-color: rgba(255, 255, 255, .1);
+
+    backdrop-filter: blur(10px);
+    height: calc(100vh - 200px);
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 50px 0 50px;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+}
+
+
+.registraion .container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    height: 100%;
+    margin-bottom: 50px;
+    padding: 0 20px;
+
+}
+
+.registraion .container form h2 {
+    color: #fb4d5c;
+    text-align: center;
+}
+
+.registraion .container form .error {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #ec3333;
+    padding: 0 10px;
+    font-size: 12px;
+    min-height: 50px;
+}
+
+.registraion .container form .error p {
+    color: #fb4d5c;
+    opacity: 0;
+    width: 50%;
+}
+
+#e5 {
+    font-size: 12px;
+    color: #fb4d5c;
+    opacity: 0;
+}
+
+.registraion .container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+
+
+}
+
+.registraion .container input {
+    width: 48%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border: 1px solid #e1e1e1;
+    background-color: #f6f6f6;
+    color: #1c2b33;
+    border-radius: 10px;
+    padding: 0 15px;
+
+}
+
+
+.registraion .container .Email input {
+    width: 100%;
+    margin: 0 5px 20px 5px;
+}
+
+.registraion .container .gender {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
+
+.registraion .container .choose {
+    width: 15px;
+}
+
+.registraion .container .intersts {
+    margin-top: -20px;
+    padding-left: 10px;
+}
+
+.registraion .container .intersts .select {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+}
+
+#submit {
+    width: 100%;
+    height: 36px;
+    background-color: #fb4d5c;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+#submit:hover {
+    background-color: transparent;
+    color: #fb4d5c;
+    border: 2px solid #fb4d5c;
+
+}
+
+/* ----------------------------------------------------------------- Validation ---------------------------------------- */
+.registraion .container form .error .found {
+    opacity: 1;
+}
+
+.registraion .container form .valid {
+    border: 2px solid rgb(21, 234, 21);
+}
+
+.registraion .container form .nvalid {
+    border: 1px solid #fb4d5c;
+}
+
+#e5.found {
+    opacity: 1;
+}
+
+/* ------------------------------------------------------ Thank You ------------------------------------- */
+.thankyou {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.thanks {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fb4d5c;
+    font-weight: bold;
+}
+
+.thanks span {
+    font-size: 80px;
+    line-height: 1;
+    mix-blend-mode: difference;
+}
+
+.thanks::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #fb4d5c;
+    animation: move 6s linear infinite;
+    transform: skewX(-10deg);
+}
+
+@keyframes move {
+
+    0%,
+    100% {
+        left: 0;
+    }
+
+    50% {
+        left: 75%;
+    }
+}
+
+/* control display of thank you page */
+.displaynone {
+    display: none;
+}
